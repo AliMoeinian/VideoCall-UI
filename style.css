@@ -7,7 +7,8 @@
 .header {
   width: 100%;
   height: 100vh;
-  background: #00122e;
+  background-color: #4158D0;
+  background-image: linear-gradient(0deg, #4724b2 0%, #C850C0 30%, #FFCC70 66%, #f95656 100%);
   position: relative;
 }
 nav {
@@ -15,7 +16,9 @@ nav {
   top: 0;
   left: 0;
   bottom: 0;
-  background: #182842;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-right: 1px rgb(0, 0, 0) solid;
   width: 120px;
   padding: 10px 0;
 }
@@ -37,18 +40,21 @@ nav ul li img {
   margin: 10px auto;
   padding: 10px;
   cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.9s, background 0.9s;
+  transition: opacity 400ms, background 400ms;
   border-radius: 10px 0px 15px 0px;
+  border: 2px black dashed;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
 }
 nav ul li img:hover {
   opacity: 1;
-  background: #513991;
+  border: 2px black solid;
+  background: #be2b2b;
   border-radius: 10px 0px 10px 0px;
+  box-shadow: rgb(238, 140, 42) 2px 2px 2px;
 }
 .active {
   opacity: 1;
-  background: #513991;
+  background: #be2b2b;
 }
 .container {
   margin-left: 120px;
@@ -79,8 +85,9 @@ nav ul li img:hover {
 .host-img {
   width: 100%;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+              rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
 .controls {
   display: flex;
   align-items: center;
@@ -90,25 +97,31 @@ nav ul li img:hover {
   width: 40px;
   margin: 20px 10px;
   cursor: pointer;
+  border: 1px outset black;
+  border-radius: 50px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   transition: transform 0.5s;
 }
 .controls .call-icon {
   width: 60px;
 }
 .controls img:hover {
+  background-color: rgb(201, 79, 22);
+  border-radius: 50px;
+  border: 0px;
   transform: translateY(-10px);
 }
 .joined {
-  background: #182842;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #6a99b9 0%, #7c81e1 100%);
   border-radius: 15px;
   padding: 30px 40px 50px;
-  color: floralwhite;
+  color: black;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-
 .joined div {
   margin-top: 20px;
   display: grid;
-
   grid-template-columns: auto auto auto;
   grid-gap: 20px;
 }
@@ -117,12 +130,18 @@ nav ul li img:hover {
   border-radius: 10px;
   cursor: pointer;
 }
+.joined>p{
+  font-weight: bold;
+  text-align: center;
+}
 .invite {
-  background: #182842;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #6a99b9 0%, #7c81e1 100%);
   border-radius: 15px;
   padding: 30px 40px 50px;
-  color: floralwhite;
+  color: black;
   margin-top: 20px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .invite img {
   margin-top: 20px;
@@ -130,4 +149,7 @@ nav ul li img:hover {
   margin-left: 5px;
   border-radius: 40%;
   cursor: pointer;
+}
+.invite>p{
+  font-weight: bold;
 }
